@@ -29,7 +29,7 @@ module AppProjektX
         :domain               => 'mail.google.com',
         :port                 => 587,
         :user_name            => 'myprojektx1@gmail.com',
-        :password             =>'xxxxxx',
+        :password             =>'Medycyna1',
         :authentication       => 'login',
         :enable_starttls_auto => true
     }
