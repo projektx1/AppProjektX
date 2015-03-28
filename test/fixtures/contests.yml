@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contestName: MyString
+  shortDescription: MyString
+  fullDescription: MyString
+  beginDate: 2015-03-17 23:13:31
+  endDate: 2015-03-17 23:13:31
+  creationDate: 2015-03-17 23:13:31
+  isActive: false
+  isStandardMode: 
+  isPromotedMode: 
+  isVIPMode: 
+  URL: MyString
+  picture: MyString
+  has_attached_file: MyString
+
+two:
+  contestName: MyString
+  shortDescription: MyString
+  fullDescription: MyString
+  beginDate: 2015-03-17 23:13:31
+  endDate: 2015-03-17 23:13:31
+  creationDate: 2015-03-17 23:13:31
+  isActive: false
+  isStandardMode: 
+  isPromotedMode: 
+  isVIPMode: 
+  URL: MyString
+  picture: MyString
+  has_attached_file: MyString

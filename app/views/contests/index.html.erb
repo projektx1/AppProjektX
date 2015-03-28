@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Contests</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th> <%= t('contest.form.contestName') %></th>
+      <th> <%= t('contest.form.shortDescription') %></th>
+      <th> <%= t('contest.form.fullDescription') %></th>
+      <th> <%= t('contest.form.beginDate') %></th>
+      <th> <%= t('contest.form.endDate') %></th>
+      <th> <%= t('contest.form.isStandardMode') %></th>
+      <th> <%= t('contest.form.isPromotedMode') %></th>
+      <th> <%= t('contest.form.isVIPMode' )%></th>
+      <th> <%= t('contest.form.URL' )%></th>
+      <th> <%= t('contest.form.picture') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contests.each do |contest| %>
+      <tr>
+        <td><%= contest.contestName %></td>
+        <td><%= contest.shortDescription %></td>
+        <td><%= contest.fullDescription %></td>
+        <td><%= contest.beginDate %></td>
+        <td><%= contest.endDate %></td>
+        <td><%= contest.creationDate %></td>
+        <td><%= contest.isActive %></td>
+        <td><%= contest.isStandardMode %></td>
+        <td><%= contest.isPromotedMode %></td>
+        <td><%= contest.isVIPMode %></td>
+        <td><%= contest.URL %></td>
+        <td><%= image_tag contest.picture.url(:thumb) %></td>
+        <td><%= link_to 'Show', contest %></td>
+        <td><%= link_to 'Edit', edit_contest_path(contest) %></td>
+        <td><%= link_to 'Destroy', contest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contest', new_contest_path %>

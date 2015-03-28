@@ -1,0 +1,49 @@
+<h2>dashboard <- tu przetumaczyc</h2>
+
+<br />
+
+<%= collection_select( :location, :id ,@locations ,:id ,:display_name ) %>
+
+
+<%=form_for @user, :url => dashboard_path, :action =>:update ,:method => :put  do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<br />
+<p>Wybierz lokalizację</p>
+ <div class="field">
+<%hidden_field_tag("user[location_ids][]",nil) %>
+  <% @locations.each do |l| %>
+      <%=check_box_tag("user[location_ids][]", l.id,
+         @user.location.detect{|d| d== l}, id: dom_id(l) )%>
+
+      <%= label_tag dom_id(l), "#{l.display_name}" %> <br />
+  <%end%>
+  </div>
+<br />
+<p>Preferowane tagi</p>
+ <div class="field">
+<%hidden_field_tag("user[reward_ids][]",nil) %>
+  <% @rewards.each do |r| %>
+      <%=check_box_tag("user[reward_ids][]", r.id,
+         @user.reward.detect{|d| d==r}, id: dom_id(r) )%>
+
+      <%= label_tag dom_id(r), "#{r.rewardName}" %> <br />
+  <%end%>
+  </div>
+<br />
+
+
+  <div class="actions">
+    <%= f.submit "Zapisz zmiany"%>
+  </div>
+<% end %>

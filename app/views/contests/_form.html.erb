@@ -1,0 +1,79 @@
+<%= form_for(@contest,  :html => { :multipart => true }) do |f| %>
+  <% if @contest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contest.errors.count, "error") %> prohibited this contest from being saved:</h2>
+
+      <ul>
+      <% @contest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t('contest.form.contestName') %>
+    <%= f.text_field :contestName %>
+  </div>
+  <div class="field">
+    <%= f.label t('contest.form.shortDescription')%>
+    <%= f.text_field :shortDescription %>
+  </div>
+  <div class="field">
+    <%= f.label t('contest.form.fullDescription')%>
+    <%= f.text_field :fullDescription %>
+  </div>
+ 
+    <%= f.label t('contest.form.beginDate')%>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker1'>
+            <%= f.text_field :beginDate, class: "form-control" %>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+          </span>
+        </div>
+        </div>
+      </div>
+  </div>
+
+    <%= f.label t('contest.form.endDate')%>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker2'>
+            <%= f.text_field :endDate, class: "form-control" %>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+          </span>
+        </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label t('contest.form.isStandardMode')%>
+    <%= f.check_box :isStandardMode %>
+  </div>
+  <div class="field">
+    <%= f.label t('contest.form.isPromotedMode')%>
+    <%= f.check_box :isPromotedMode %>
+  </div>
+  <div class="field">
+    <%= f.label t('contest.form.isVIPMode') %>
+    <%= f.check_box :isVIPMode %>
+  </div>
+  <div class="field">
+    <%= f.label t('contest.form.URL')%>
+    <%= f.text_field :URL %>
+  </div>
+  <div class="field">
+   <%= f.label t('contest.form.picture')%>
+  <%= f.file_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit t('contest.form.submit') %>
+  </div>
+<% end %>
+
+

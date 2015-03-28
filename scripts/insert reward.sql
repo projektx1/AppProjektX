@@ -1,0 +1,15 @@
+INSERT INTO `rewards` ( `rewardName`) 
+VALUES ( 'Dla mężczyzn' ),
+( 'Dla mężczyzn' ),
+( 'Dla kobiet' ),
+( 'Dla dzieci' ),
+( 'Kosmetyki' ),
+( 'Bilety / Wejściówki' ),
+( 'Muzyka' ),
+( 'Film' ),
+( 'Książki' ),
+( 'Odzież' ),
+( 'Wycieczka' ),
+( 'Zabawka' ),
+( 'RTV' ),
+( 'AGD' );

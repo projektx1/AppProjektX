@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AppProjektX</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', media: 'all'%>  
+  <%= stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', media: 'all'%>  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'layouts/nav'%>
+
+<div class="container" >
+
+<p class="notice"><%= notice%></p>
+<p class="alert"><%= alert %></p>
+
+
+
+
+<%= yield %>
+
+
+ 
+</div>
+
+</body>
+
+ <footer >
+    <div id="m_footer">
+        <p>&copy; 2015</p>
+    </div>
+ </footer>
+</html>

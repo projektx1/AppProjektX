@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contestname:</strong>
+  <%= @contest.contestName %>
+</p>
+
+<p>
+  <strong>Shortdescription:</strong>
+  <%= @contest.shortDescription %>
+</p>
+
+<p>
+  <strong>Fulldescription:</strong>
+  <%= @contest.fullDescription %>
+</p>
+
+<p>
+  <strong>Begindate:</strong>
+  <%= @contest.beginDate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @contest.endDate %>
+</p>
+
+<p>
+  <strong>Creationdate:</strong>
+  <%= @contest.creationDate %>
+</p>
+
+<p>
+  <strong>Isactive:</strong>
+  <%= @contest.isActive %>
+</p>
+
+<p>
+  <strong>Isstandardmode:</strong>
+  <%= @contest.isStandardMode %>
+</p>
+
+<p>
+  <strong>Ispromotedmode:</strong>
+  <%= @contest.isPromotedMode %>
+</p>
+
+<p>
+  <strong>Isvipmode:</strong>
+  <%= @contest.isVIPMode %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @contest.URL %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+<%= image_tag @contest.picture.url(:medium) %>
+<%= image_tag @contest.picture.url(:thumb) %>
+</p>
+
+
+<%= link_to 'Edit', edit_contest_path(@contest) %> |
+<%= link_to 'Back', contests_path %>

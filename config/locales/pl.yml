@@ -1,0 +1,23 @@
+pl:
+ hello: "Witaj!"
+ contest:
+   form:
+     contestName: "Nazwa konkursu"
+     shortDescription: "Skrócony opis"
+     fullDescription: "Opis"
+     beginDate: "Data startu"
+     endDate: "Data końca"
+     isStandardMode: "Standardowe"
+     isPromotedMode: "Promowone"
+     isVIPMode: "VIP"
+     URL: "link do konkursu"
+     picture: "Wstaw obrazek"
+     submit: "Wyslij"
+
+
+
+ date: #Throws an exception otherwise.
+   order:
+    - "day"
+    - "month"
+    - "year"
